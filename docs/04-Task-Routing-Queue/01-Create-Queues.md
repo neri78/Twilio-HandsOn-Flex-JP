@@ -44,4 +44,4 @@ TaskRouter画面が表示されます。`Flex Task Assignment`と名前のつい
 
 ## 次のハンズオン
 
-- [ハンズオン: タスクルーティング - 部門別問い合わせキューを作成](../04-Task-Routing-Queue/00-Overview.md)
+- [ハンズオン: タスクルーティング - タスクフローを設定](../05-Task-Routing-Workflow/00-Overview.md)
