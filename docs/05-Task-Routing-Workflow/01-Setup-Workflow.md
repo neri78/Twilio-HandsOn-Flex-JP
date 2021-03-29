@@ -22,12 +22,7 @@
 
 [Twilio Studioコンソール](https://www.twilio.com/console/studio/dashboard)を開き、`Webchat Flow`をクリックします。
 
-`send_to_flex_1`ウィジェットをクリックし、`ATTRIBUTES`を下記のものに変更します。
-
-```json
-{"name": "{{trigger.message.ChannelAttributes.from}}", "channelType": "{{trigger.message.ChannelAttributes.channel_type}}", "channelSid": "{{trigger.message.ChannelSid}}" , 
-"task" : {"skillsNeeded" : ["{{flow.variables.channel}}"]}}
-```
+`send_to_flex_1`ウィジェットをクリックし、`ATTRIBUTES`を[こちら](../samples/studio-attributes.json)に変更します。
 
 この`JSON`では最後にユーザーの選択をFlexにデータとして渡しています。`Publish`ボタンをクリックし、フローを公開します。
 
