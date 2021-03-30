@@ -6,6 +6,6 @@
 - Workflowの設定方法を学習する
 
 ## 手順
-1. [Workflowの設定を設定する](01-Setup-Workflow.md)
+1. [Workflowを設定する](01-Setup-Workflow.md)
 
 
