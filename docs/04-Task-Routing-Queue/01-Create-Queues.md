@@ -34,8 +34,8 @@ TaskRouter画面が表示されます。`Flex Task Assignment`と名前のつい
 
 |設定値|値|
 |:----|:----|
-|TASKQUEUE NAME| support |
-|QUEUE EXPRESSION| routing.skills HAS "support"|
+|TASKQUEUE NAME| sales |
+|QUEUE EXPRESSION| routing.skills HAS "sales"|
 
 ![sales queue](../assets/04-Sales-Queue.png)
 
