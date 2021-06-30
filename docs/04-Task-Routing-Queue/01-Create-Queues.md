@@ -22,7 +22,7 @@ TaskRouter画面が表示されます。`Flex Task Assignment`と名前のつい
 |設定値|値|
 |:----|:----|
 |TASKQUEUE NAME| support |
-|QUEUE EXPRESSION| routing.skills HAS "support"|
+|QUEUE EXPRESSION| routing.skills HAS \"support\"|
 
 `QUEUE EXPRESSION`が正しく設定されていれば、`Matching Workers`に管理者エージェントが表示されます。
 

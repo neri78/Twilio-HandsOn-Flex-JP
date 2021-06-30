@@ -12,7 +12,7 @@
 
 ## フィルタを追加
 
-`Add a Filter`ボタンをクリックし、フィルタ名を`support filter`、MATCHING TASKSを`"sales" IN task.skillsNeeded`と設定します。その後、MATCHING WORKERSの`QUEUE`を`support`と指定します。下記のスクリーンショットを参考にしてください。
+`Add a Filter`ボタンをクリックし、フィルタ名を`support filter`、MATCHING TASKSを`"support" IN task.skillsNeeded`と設定します。その後、MATCHING WORKERSの`QUEUE`を`support`と指定します。下記のスクリーンショットを参考にしてください。
 
 ![support filter](../assets/05-support-filter.png)
 
@@ -36,10 +36,10 @@ Flex画面に戻り、Webチャットを再度立ち上げサポートに問い�
 
 これでハンズオンは終了です。今回学習した項目は下記の通りです。
 
-- Studioを使った問い合わせフローのカスタマイズ
+- `Studio`を使った問い合わせフローのカスタマイズ
 - スキルの作成と割り当て
-- TaskRouter - TaskQueueを使ったキューの作成
-- TaskRouter - Workflowを使ったタスクフローのカスタマイズ
+- `TaskRouter` - `TaskQueue`を使ったキューの作成
+- `TaskRouter` - `Workflow`を使ったタスクフローのカスタマイズ
 
 今回はフィルタ機能を使ってキューをわりふりましたが、別の方法も利用できます。詳細については次のチュートリアルをご覧ください。
 

@@ -20,8 +20,8 @@ Flex管理者コンソールを開き、`SKILLS`ボタンをクリックしま�
 
 |LABEL|QUEUE EXPRESSIONS|WORKFLOW EXPRESSIONS|
 |:----|:----|:-----|
-|sales| routing.skills HAS "sales" | "sales" IN task.skillsNeeded |
-|support| routing.skills HAS "support"| "support" IN task.skillsNeeded|
+|sales| routing.skills HAS \"sales\" | \"sales\" IN task.skillsNeeded |
+|support| routing.skills HAS \"support\"| \"support\" IN task.skillsNeeded|
 
 ## スキルを担当者に設定
 
