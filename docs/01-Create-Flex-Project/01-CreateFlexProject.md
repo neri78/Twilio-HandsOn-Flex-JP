@@ -4,7 +4,9 @@
 
 ## Twilioアカウントの作成
 
-Twilioアカウントを保有していない場合は、下記のBlogに従い、アカウントを作成してください。また、作成中に使用用途を確認する質問が英語で表示されます。下記のスクリーンショットを参考に`Flex`を選択してください。
+Twilioアカウントを保有していない場合は、下記のBlogに従い、アカウントを作成してください。また、作成中に使用用途を確認する質問が英語で表示されます。スクリーンショットを参考に`Flex`を選択してください。
+
+[Blog - Twilioアカウントを作成する方法](https://www.twilio.com/blog/how-to-create-twilio-account-jp)
 
 ![Flex Account](../assets/01-Create-Flex.jpg)
 
