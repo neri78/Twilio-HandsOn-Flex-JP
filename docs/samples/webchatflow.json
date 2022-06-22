@@ -1,177 +1,188 @@
 {
-    "description": "Bot flow for creating a Flex webchat task",
-    "states": [
-      {
-        "name": "Trigger",
-        "type": "trigger",
-        "transitions": [
-          {
-            "next": "send_and_reply_1",
-            "event": "incomingMessage"
-          },
-          {
-            "event": "incomingCall"
-          },
-          {
-            "event": "incomingRequest"
-          }
-        ],
-        "properties": {
-          "offset": {
-            "x": 0,
-            "y": -10
-          }
+  "description": "IVR for creating a Flex voice task",
+  "states": [
+    {
+      "name": "Trigger",
+      "type": "trigger",
+      "transitions": [
+        {
+          "event": "incomingMessage"
+        },
+        {
+          "next": "gather_1",
+          "event": "incomingCall"
+        },
+        {
+          "event": "incomingConversationMessage"
+        },
+        {
+          "event": "incomingRequest"
+        },
+        {
+          "event": "incomingParent"
         }
-      },
-      {
-        "name": "send_and_reply_1",
-        "type": "send-and-wait-for-reply",
-        "transitions": [
-          {
-            "next": "split_1",
-            "event": "incomingMessage"
-          },
-          {
-            "event": "timeout"
-          },
-          {
-            "event": "deliveryFailure"
-          }
-        ],
-        "properties": {
-          "offset": {
-            "x": 0,
-            "y": 170
-          },
-          "service": "{{trigger.message.InstanceSid}}",
-          "channel": "{{trigger.message.ChannelSid}}",
-          "from": "{{flow.channel.address}}",
-          "body": "今回はお問い合わせありがとうございます。「製品」のご購入に関するご質問でしょうか。それとも、購入された製品の「サポート」に関するご質問でしょうか。",
-          "timeout": "3600"
-        }
-      },
-      {
-        "name": "split_1",
-        "type": "split-based-on",
-        "transitions": [
-          {
-            "event": "noMatch"
-          },
-          {
-            "next": "set_variables_1",
-            "event": "match",
-            "conditions": [
-              {
-                "friendly_name": "If value contains 製品",
-                "arguments": [
-                  "{{widgets.send_and_reply_1.inbound.Body}}"
-                ],
-                "type": "contains",
-                "value": "製品"
-              }
-            ]
-          },
-          {
-            "next": "set_variables_2",
-            "event": "match",
-            "conditions": [
-              {
-                "friendly_name": "If value contains サポート",
-                "arguments": [
-                  "{{widgets.send_and_reply_1.inbound.Body}}"
-                ],
-                "type": "contains",
-                "value": "サポート"
-              }
-            ]
-          }
-        ],
-        "properties": {
-          "input": "{{widgets.send_and_reply_1.inbound.Body}}",
-          "offset": {
-            "x": -10,
-            "y": 380
-          }
-        }
-      },
-      {
-        "name": "set_variables_1",
-        "type": "set-variables",
-        "transitions": [
-          {
-            "next": "send_message_1",
-            "event": "next"
-          }
-        ],
-        "properties": {
-          "variables": [
-            {
-              "value": "sales",
-              "key": "channel"
-            },
-            {
-              "value": "製品",
-              "key": "displayname"
-            }
-          ],
-          "offset": {
-            "x": -80,
-            "y": 590
-          }
-        }
-      },
-      {
-        "name": "set_variables_2",
-        "type": "set-variables",
-        "transitions": [
-          {
-            "next": "send_message_1",
-            "event": "next"
-          }
-        ],
-        "properties": {
-          "variables": [
-            {
-              "value": "support",
-              "key": "channel"
-            },
-            {
-              "value": "サポート",
-              "key": "displayname"
-            }
-          ],
-          "offset": {
-            "x": 350,
-            "y": 580
-          }
-        }
-      },
-      {
-        "name": "send_message_1",
-        "type": "send-message",
-        "transitions": [
-          {
-            "event": "sent"
-          },
-          {
-            "event": "failed"
-          }
-        ],
-        "properties": {
-          "offset": {
-            "x": 70,
-            "y": 800
-          },
-          "service": "{{trigger.message.InstanceSid}}",
-          "channel": "{{trigger.message.ChannelSid}}",
-          "from": "{{flow.channel.address}}",
-          "to": "{{contact.channel.address}}",
-          "body": "{{flow.variables.displayname}}に関するお問い合わせを承りました。担当者が参りますのでお待ちください。"
+      ],
+      "properties": {
+        "offset": {
+          "x": 0,
+          "y": -10
         }
       }
-    ],
-    "initial_state": "Trigger",
-    "flags": {
-      "allow_concurrent_calls": true
+    },
+    {
+      "name": "gather_1",
+      "type": "gather-input-on-call",
+      "transitions": [
+        {
+          "next": "split_1",
+          "event": "keypress"
+        },
+        {
+          "next": "gather_1",
+          "event": "speech"
+        },
+        {
+          "next": "gather_1",
+          "event": "timeout"
+        }
+      ],
+      "properties": {
+        "voice": "Polly.Mizuki",
+        "number_of_digits": 1,
+        "speech_timeout": "auto",
+        "offset": {
+          "x": 100,
+          "y": 170
+        },
+        "loop": 1,
+        "finish_on_key": "#",
+        "say": "お電話ありがとうございます。製品のご購入に関するお問い合わせの場合は1を、ご購入後のサポートに関するお問い合わせは2を押してください。",
+        "language": "ja-JP",
+        "stop_gather": true,
+        "gather_language": "en",
+        "profanity_filter": "true",
+        "timeout": 5
+      }
+    },
+    {
+      "name": "split_1",
+      "type": "split-based-on",
+      "transitions": [
+        {
+          "next": "gather_1",
+          "event": "noMatch"
+        },
+        {
+          "next": "set_variables_1",
+          "event": "match",
+          "conditions": [
+            {
+              "friendly_name": "If value equal_to 1",
+              "arguments": [
+                "{{widgets.gather_1.Digits}}"
+              ],
+              "type": "equal_to",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "next": "set_variables_2",
+          "event": "match",
+          "conditions": [
+            {
+              "friendly_name": "If value equal_to 2",
+              "arguments": [
+                "{{widgets.gather_1.Digits}}"
+              ],
+              "type": "equal_to",
+              "value": "2"
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "input": "{{widgets.gather_1.Digits}}",
+        "offset": {
+          "x": 120,
+          "y": 400
+        }
+      }
+    },
+    {
+      "name": "set_variables_1",
+      "type": "set-variables",
+      "transitions": [
+        {
+          "next": "say_play_1",
+          "event": "next"
+        }
+      ],
+      "properties": {
+        "variables": [
+          {
+            "value": "sales",
+            "key": "channel"
+          },
+          {
+            "value": "営業部",
+            "key": "department"
+          }
+        ],
+        "offset": {
+          "x": -10,
+          "y": 630
+        }
+      }
+    },
+    {
+      "name": "set_variables_2",
+      "type": "set-variables",
+      "transitions": [
+        {
+          "next": "say_play_1",
+          "event": "next"
+        }
+      ],
+      "properties": {
+        "variables": [
+          {
+            "value": "support",
+            "key": "channel"
+          },
+          {
+            "value": "サポート",
+            "key": "department"
+          }
+        ],
+        "offset": {
+          "x": 380,
+          "y": 630
+        }
+      }
+    },
+    {
+      "name": "say_play_1",
+      "type": "say-play",
+      "transitions": [
+        {
+          "event": "audioComplete"
+        }
+      ],
+      "properties": {
+        "voice": "Polly.Mizuki",
+        "offset": {
+          "x": 150,
+          "y": 860
+        },
+        "loop": 1,
+        "say": "ありがとうございます。それでは {{flow.variables.department}} にお繋ぎします。",
+        "language": "ja-JP"
+      }
     }
+  ],
+  "initial_state": "Trigger",
+  "flags": {
+    "allow_concurrent_calls": true
   }
+}

@@ -1,22 +1,19 @@
 #  手順1: キューを作成する
 
-この手順ではFlex管理者コンソールからTaskRouter画面に遷移し、セールス、サポートそれぞれのキューを作成します。
+この手順ではTwilioコンソールに用意されているTaskRouter画面に遷移し、Flex用にセールス、サポートそれぞれのキューを作成します。
 
 ## TaskRouterを表示
 
-Flex管理者コンソールを開き、`ROUTING`ボタンをクリックします。
+[TaskRouter](https://www.twilio.com/console/taskrouter)コンソールを開くと、`Flex Task Assignment`ワークスペースが定義されていることを確認できます。このワークスペースをクリックします。
 
-![Flex Admin Console](../assets/04-Flex-Admin-Console.png)
+![Flex Admin Console](../assets/04-Console-TaskRouter.png)
 
-TaskRouter画面が表示されます。`Flex Task Assignment`と名前のついた`Workspace`をクリックします。
-
-![Flex TaskRouter](../assets/04-TaskRouter-Workspaces.png)
-
-サイドナビゲーションから`Task Queues`を選択しキューの一覧を表示します。
-
+キューの一覧が表示されます。標準ではすべての担当者が属する`Everyone`が表示されています。
 ![Flex TaskQueues](../assets/04-TaskQueues.png)
 
-`+`ボタンをクリックしサポートキューを作成します。
+`View all Task Queues`リンクをクリックします。
+
+遷移先の画面で`+`ボタンをクリックしサポートキューを作成します。
 下記のテーブルの設定値を参考にしてください。
 
 |設定値|値|
@@ -37,10 +34,7 @@ TaskRouter画面が表示されます。`Flex Task Assignment`と名前のつい
 |TASKQUEUE NAME| sales |
 |QUEUE EXPRESSION| routing.skills HAS "sales"|
 
-![sales queue](../assets/04-Sales-Queue.png)
-
-
-これでサポートスキルが管理者エージェントに追加されました。
+これでサポート、営業向けキューが追加されました。
 
 ## 次のハンズオン
 

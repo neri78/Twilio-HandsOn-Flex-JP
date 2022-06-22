@@ -20,7 +20,7 @@
 
 ## Studioフローを更新
 
-[Twilio Studioコンソール](https://www.twilio.com/console/studio/dashboard)を開き、`Webchat Flow`をクリックします。
+[Twilio Studioコンソール](https://www.twilio.com/console/studio/dashboard)を開き、`Voice IVR`をクリックします。
 
 `send_to_flex_1`ウィジェットをクリックし、`ATTRIBUTES`を[こちら](../samples/studio-attributes.json)に変更します。
 
@@ -28,9 +28,14 @@
 
 ## テスト実行
 
-Flex画面に戻り、Webチャットを再度立ち上げサポートに問い合わせます。チャット画面に表示されている`Queue`が`support`と表示されていれば成功です。
+再度電話をかけ、サポートに問い合わせます。着信画面に表示されている`Queue`が`support`と表示されていれば成功です。
 
-![Chat Queue](../assets/05-chat-queue.png)
+![Support Queue](../assets/05-voice-queue.png)
+
+また、問い合わせ一覧画面においても`support - Voice`と表示されていることを確認します。
+
+![Support Queue](../assets/05-queue-overview.png)
+
 
 ## まとめ
 

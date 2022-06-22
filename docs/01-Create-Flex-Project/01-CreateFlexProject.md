@@ -36,4 +36,4 @@ Twilioアカウントを保有していない場合は、下記のBlogに従い�
 
 ## 次の手順
 
-- [手順2: Flexの使用方法](02-Play-with-Flex.md)
+- [手順2: Flexを試してみる](02-Play-with-Flex.md)

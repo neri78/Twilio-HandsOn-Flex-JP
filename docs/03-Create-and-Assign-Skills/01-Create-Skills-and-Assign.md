@@ -1,14 +1,14 @@
 #  手順1: スキルの作成と担当者への設定
 
-この手順ではFlex管理者コンソールでスキルを作成し、担当者にスキルを設定する方法を学習します。
+この手順ではFlex Admin画面でスキルを作成し、担当者にスキルを設定する方法を学習します。
 
 ## スキルを作成
 
-Flex管理者コンソールを開き、`SKILLS`ボタンをクリックします。
+Flex Admin画面を開き、`Skills`ボタンをクリックします。
 
 ![Flex Admin Console](../assets/03-Flex-Admin-Console.png)
 
-`NAME OF SKILL`ボックスに`sales`と名前を入力し、`ADD NEW SKILL`ボタンをクリックします。
+`Name of skill`ボックスに`sales`と名前を入力し、`Add new skill`ボタンをクリックします。
 
 ![Flex add skill](../assets/03-Add-Skill.png)
 
@@ -25,13 +25,11 @@ Flex管理者コンソールを開き、`SKILLS`ボタンをクリックしま�
 
 ## スキルを担当者に設定
 
-エージェント画面を表示し、フィルタリングを`All Agents`に設定します。
-
-![Flex - agents](../assets/03-Agents.png)
-
-表示されたエージェントを選択し、`support`スキルを追加します。`Save`ボタンを忘れないようにしましょう。スクリーンショットを参考にしてください。
+エージェント画面を表示します。表示されたエージェントを選択し、`support`スキルを追加します。`Save`ボタンを忘れないようにしましょう。スクリーンショットを参考にしてください。
 
 ![Flex - add skill to agent](../assets/03-Add-Skills.png)
+
+スキルが表示されない場合は、一旦タブをクローズし、[Flex](https://flex.twilio.com/)を再度開いてください。
 
 これでサポートスキルが管理者エージェントに追加されました。
 

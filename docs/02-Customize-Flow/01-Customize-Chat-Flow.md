@@ -1,16 +1,24 @@
-#  手順1: Webチャットの問い合わせフローをカスタマイズする
+#  手順1: 問い合わせフローをカスタマイズする
 
-この手順ではWebチャットの問い合わせに使用されているフローをカスタマイズする方法を学習します。
+この手順では問い合わせに使用されているフローをカスタマイズする方法を学習します。
 
-## Webチャットの問い合わせフローを表示
+## 問い合わせフローを表示
 
-`4 - Handle calls & messages`タスクを選択し`1. To get started open your Studio WebChat Flow `と書かれているリンクをクリックします。もし、このタスクを`COMPLETE`とし、削除してしまった場合は[こちら](https://jp.twilio.com/console/studio/dashboard)のリンクからStudioフローの一覧を表示し`Webchat Flow`をクリックします。
+Flex Adminコンソールから`Communications`を選択します。
 
-![Flex - Link to Studio](../assets/02-Web-Chat-Studio.png)
+![Admin Console - Communication](../assets/01-Flex-Admin-Communications.png)
 
-このリンクをクリックすると、WebChat問い合わせ時のフロー編集画面が表示されます。
+次の画面で`Flows`の`Edit`リンクをクリックします。
 
-![Flex - Web Chat Flow - Studio](../assets/02-Web-Chat-Studio-Flow.png)
+![Admin Console - Flow](../assets/02-Flex-Admin-Communications-Flows.png)
+
+Flexにはそれぞれ、Webチャット用、SMSを含むメッセージ用、音声（電話）用の応答フローが用意されています。
+
+![Console - Studio Flows](../assets/02-Console-Studio-Flows.png)
+
+`Voice IVR`のリンクをクリックすると、音声問い合わせ時のフロー編集画面が表示されます。
+
+![Flex - Web Chat Flow - Studio](../assets/02-Voice-Studio-Flow.png)
 
 デザイン画面に配置されている`Send To Flex`ウィジェットを選択し、右画面に表示される`ATTRIBUTES`の値を別の場所に控えておきます。
 
@@ -38,7 +46,7 @@
 |設定項目|値|
 |:----|:----|
 |WORKFLOW| Assign to Anyone |
-|CHANNEL| Programmable Chat|
+|CHANNEL| Voice|
 |Attributes|先ほど控えた値|
 
 下記のスクリーンショットも参考にしてください。
@@ -49,9 +57,7 @@
 
 ## チャットをテスト実行
 
-Flexに戻り、再度Webチャットを起動してみましょう。質問に答えたのち、Flexにチャットタスクが追加されていれば設定が正しく行われています。
-
-![Flex - Test Web Chat](../assets/02-Test-WebChat.png)
+Flexに戻り、再度電話をかけてみましょう。質問に答えたのち、Flexにタスクが追加されていれば設定が正しく反映されています。
 
 ## 次のハンズオン
 
