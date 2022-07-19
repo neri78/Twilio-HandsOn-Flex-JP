@@ -11,4 +11,6 @@
 
 ## 次のハンズオン
 
-- [ハンズオン: 問い合わせフローをカスタマイズ](../02-Customize-Chat-Flow/00-Overview.md)
+- [ハンズオン: 問い合わせフローをカスタマイズ](../docs/02-Customize-Flow/00-Overview.html)
+
+
