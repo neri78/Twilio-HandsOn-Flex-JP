@@ -1,5 +1,4 @@
 # Twilio-HandsOn-Flex-JP
-![Flex handson](docs/assets/flex-header.jpg)
 [Twilio Flex](https://www.twilio.com/ja/flex)のハンズオン手順書です。
 Flexインスタンスの作成からコールフローの設定、エージェントのスキル設定やルーティングなど、基本的な設定方法を学習できます。
 
