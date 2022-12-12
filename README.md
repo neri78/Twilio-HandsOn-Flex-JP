@@ -4,7 +4,7 @@ Flexインスタンスの作成からコールフローの設定、エージェ�
 
 ## 注意点
 
-このハンズオンは新しいUIバージョンである[2.x系のベータバージョン](https://www.twilio.com/changelog/flex-ui-20-is-now-in-public-beta)に対応しています。1.x系を利用している場合も同じ設定が可能ですが、Flex管理コンソール画面が異なります。
+このハンズオンは新しいUIバージョンである[2.x系](https://www.twilio.com/changelog/flex-ui-20-is-now-in-ga)に対応しています。1.x系を利用している場合も同じ設定が可能ですが、Flex管理コンソール画面が異なります。
 
 ## ハンズオン
 

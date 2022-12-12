@@ -24,16 +24,28 @@ Flexにはそれぞれ、Webチャット用、SMSを含むメッセージ用、�
 
 ![Flex - Send to Flex Widget](../assets/02-Send-to-Flex-attributes.png)
 
+```json
+{ 
+    "type": "inbound", 
+    "name": "{{trigger.call.From}}" 
+}
+```
+
 ## フローの定義を更新
 
 次に`Trigger`ウィジェットをクリックし、`Show Flow JSON`ボタンをクリックします。
 
 ![Flex - Studio - Trigger](../assets/02-Trigger-JSON.png)
 
-表示されたダイアログに[こちら](../samples/webchatflow.json)のJSONをペーストし、`Save`ボタンをクリックします。このフローは問い合わせの際に製品の購入に関する問い合わせなのか、サポートに関する問い合わせなのかを質問します。
+表示されたダイアログには現在のフローの定義が表示されており、ビジュアルエディタを使用せず直接変更が可能です。
+
+![Flex - Studio - Trigger - Flow](../assets/02-Trigger-JSON-Editor.png)
+
+今回は[こちら](../samples/webchatflow.json)のJSONをペーストし、`Save`ボタンをクリックします。このフローは問い合わせの際に製品の購入に関する問い合わせなのか、サポートに関する問い合わせなのかを質問します。
 
 ![Flex - Studio - Load](../assets/02-Studio-Load-JSON.png)
 
+うまくインポートされない場合は、画面の更新を行い、何度か繰り返してください。
 
 ## Send To Flexウィジェットを追加
 
@@ -49,11 +61,8 @@ Flexにはそれぞれ、Webチャット用、SMSを含むメッセージ用、�
 |CHANNEL| Voice|
 |Attributes|先ほど控えた値|
 
-下記のスクリーンショットも参考にしてください。
 
-![Flex - Studio - Configure](../assets/02-Send-To-Flex-Configure.png)
-
-すべての設定を完了したのち、画面上部の`Publish`ボタンをクリックし、フローを公開します。
+すべての設定を完了したのち、画面上部の`Publish`ボタンをクリックしてフローを公開します。
 
 ## 自動音声応答をテスト
 

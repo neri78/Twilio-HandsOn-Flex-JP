@@ -8,7 +8,3 @@
 
 ## 手順
 1. [スキルの作成と担当者への設定](01-Create-Skills-and-Assign.md)
-
-## 次のハンズオン
-
-- [ハンズオン: タスクルーティング - 部門別問い合わせキューを作成](../04-Task-Routing-Queue/00-Overview.md)

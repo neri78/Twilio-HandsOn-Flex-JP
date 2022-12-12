@@ -4,17 +4,17 @@
 
 ## ステータスをオンラインに変更
 
-Flex画面の右上に表示されている自分自身のステータスを`Online`に変更します。
+Flex画面の右上に表示されている自分自身のステータスを`Available`に変更します。
 
 ![Flex - Status](../assets/01-Flex-Status.jpg)
 
 ## 電話番号を確認
 
-Flexを初期化した場合、米国番号が標準で割り当てられています。
+Flexを初期化した際に着信を受け付ける番号として米国番号が自動的に割り当てられます。今回のハンズオンではこの番号に電話をかけて動作を確認します。そのため、番号を控えてください。この番号は[`Phone Numbers`](https://www.twilio.com/console/phone-numbers/incoming)コンソールから設定を変更できます。
 
-番号は`Phone Numbers`コンソールで確認できます。[こちら](https://www.twilio.com/console/phone-numbers/incoming)のリンクを開き確認します。下記のスクリーンショットを確認してください。
 
-![Console - Phone Number](../assets/01-Console-Phone-Number.png)
+![Flex - US number](../assets/01-Flex-Admin-Number.png)
+
 
 この番号に電話をかけるとFlexの担当者に接続することができます。
 

@@ -1,1 +1,5 @@
-{"name": "{{trigger.message.ChannelAttributes.from}}", "channelType": "{{trigger.message.ChannelAttributes.channel_type}}", "channelSid": "{{trigger.message.ChannelSid}}" , "task" : {"skillsNeeded" : ["{{flow.variables.channel}}"]}}    
+{ "type": "inbound", "name": "{{trigger.call.From}}",   "task": {
+    "skillsNeeded": [
+      "{{flow.variables.channel}}"
+    ] }
+}

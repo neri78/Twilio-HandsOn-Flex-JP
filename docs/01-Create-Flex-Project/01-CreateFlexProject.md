@@ -22,17 +22,17 @@ Twilioアカウントを保有していない場合は、下記のBlogに従い�
 > 短時間に複数のTwilioプロジェクトを続けて作成した場合、不正利用だとみなされ、サスペンドされる可能性があります。特に同じ電話番号で連続認証した場合に発生しがちなためご注意ください。
 
 ## コンソールにアクセスし、Flexプロジェクトを作成
-[Twilio コンソール](https://jp.twilio.com/console)を開きます。
+[Twilio コンソール](https://www.twilio.com/console)を開きます。
 
-コンソールに表示されている`Explore Products`をクリックし、製品一覧から`Flex`を選択するか直接[Flex コンソール](https://jp.twilio.com/console/flex/overview)を開きます。
+コンソールに表示されている`Explore Products`をクリックし、製品一覧から`Flex`を選択するか直接[Flex コンソール](https://www.twilio.com/console/flex/overview)を開きます。
 
 ![console - Flex](../assets/01-console-flex-2022.png)
 
-ここで`Create my Flex account`ボタンをクリックするとアカウント名の選択指定、電話番号の確認、そして前のセクションと同様に利用用途の確認画面が表示されます。利用用途については`Flex`を選択してください。
+ここで`Create my Flex account`ボタンをクリックするとアカウント名の選択指定、電話番号の確認画面が表示されます。もし、そして前のセクションと同様に利用用途の確認画面が表示された場合は`Flex`を選択してください。
 
-初期化が完了すると、__flex.twilio.com__ にリダイレクトされ、Flexの初期画面が表示されます。
+初期化が完了すると、コンソール画面が表示されます。ここで `Log in with Console`をクリックするとFlex画面が別ウィンドウで表示されます。
 
-![Flex init](../assets/01-flex-initialization.png)
+![Launch Flex from Console](../assets/01-launch-flex-console.png)
 
 ## 次の手順
 

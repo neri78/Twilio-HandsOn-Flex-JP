@@ -8,9 +8,3 @@
 
 ## 手順
 1. [Twilioアカウントと、Flexプロジェクトを作成](01-CreateFlexProject.md)
-
-## 次のハンズオン
-
-- [ハンズオン: 問い合わせフローをカスタマイズ](../docs/02-Customize-Flow/00-Overview.html)
-
-

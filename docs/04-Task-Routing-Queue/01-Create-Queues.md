@@ -8,20 +8,22 @@
 
 ![Flex Admin Console](../assets/04-Console-TaskRouter.png)
 
-キューの一覧が表示されます。標準ではすべての担当者が属する`Everyone`が表示されています。
+Workspaceではキューの一覧が表示されます。標準ではすべての担当者が属する`Everyone`が表示されています。
 ![Flex TaskQueues](../assets/04-TaskQueues.png)
 
-`View all Task Queues`リンクをクリックします。
+この画面で`View all Task Queues`リンクをクリックします。
 
 遷移先の画面で`+`ボタンをクリックしサポートキューを作成します。
 下記のテーブルの設定値を参考にしてください。
 
 |設定値|値|
 |:----|:----|
-|TASKQUEUE NAME| support |
-|QUEUE EXPRESSION| routing.skills HAS \"support\"|
+|Task Queue Name| support |
+|Reservation Activity| Offline |
+|Assignment Activity| Offline |
+|Target Worker expression| routing.skills HAS \"support\"|
 
-`QUEUE EXPRESSION`が正しく設定されていれば、`Matching Workers`に管理者エージェントが表示されます。
+保存後、作成したsupportキューを開きます。この際、`Target Worker expression`が正しく設定されていれば、`Matching Workers`に管理者エージェントが表示されます。
 
 ![support queue](../assets/04-Support-Queue.png)
 
@@ -32,7 +34,9 @@
 |設定値|値|
 |:----|:----|
 |TASKQUEUE NAME| sales |
-|QUEUE EXPRESSION| routing.skills HAS "sales"|
+|Reservation Activity| Offline |
+|Assignment Activity| Offline |
+|Target Worker expression| routing.skills HAS "sales"|
 
 これでサポート、営業向けキューが追加されました。
 

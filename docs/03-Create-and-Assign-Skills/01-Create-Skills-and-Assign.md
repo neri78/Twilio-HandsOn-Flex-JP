@@ -29,7 +29,7 @@ Flex Admin画面を開き、`Skills`ボタンをクリックします。
 
 ![Flex - add skill to agent](../assets/03-Add-Skills.png)
 
-スキルが表示されない場合は、一旦タブをクローズし、[Flex](https://flex.twilio.com/)を再度開いてください。
+スキルが表示されない場合は、ページをリロードし再度開いてください。
 
 これでサポートスキルが管理者エージェントに追加されました。
 

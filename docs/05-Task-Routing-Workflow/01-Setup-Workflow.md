@@ -36,16 +36,18 @@
 
 ![Support Queue](../assets/05-queue-overview.png)
 
+続いて営業部門に問い合わせた際にはフィルタ条件に合致していないので、初期の`Everyone`キューに通話がルーティングされていることを確認してください。
 
 ## まとめ
 
 これでハンズオンは終了です。今回学習した項目は下記の通りです。
 
+- `Twilio Flex`の立ち上げ
 - `Studio`を使った問い合わせフローのカスタマイズ
 - スキルの作成と割り当て
 - `TaskRouter` - `TaskQueue`を使ったキューの作成
 - `TaskRouter` - `Workflow`を使ったタスクフローのカスタマイズ
 
-今回はフィルタ機能を使ってキューをわりふりましたが、別の方法も利用できます。詳細については次のチュートリアルをご覧ください。
+今回はフィルタ機能を使ってルーティングを行いましたが、別の方法も利用できます。詳細については次のチュートリアルをご覧ください。
 
 [Twilio Flex Quickstart (Advanced): Multiple Users and Skills-based Routing](https://www.twilio.com/docs/flex/quickstart/flex-routing-skills)
