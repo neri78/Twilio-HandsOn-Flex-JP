@@ -5,3 +5,6 @@
 ## ハンズオンのゴール
 - TaskRouterの利用方法を理解する
 - キューを作成する
+
+## 手順
+1. [TaskRouter - キューの作成](01-Create-Queues.md)
